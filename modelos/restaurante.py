@@ -56,7 +56,7 @@ class Restaurante:
     def exibir_cardapio(self): #isto é uma propriedade porque não recebe parâmetros
         print(f'Cardápio do restaurante {self._nome}\n')
         for i,item in enumerate(self._cardapio, start=1):
-            if hasattr(item, 'descricao'):
+            if hasattr(item, 'descricao'): # hasattr verifica se o item possui o atributo descrição
                 mensagem_prato = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco:.2f} | Descrição: {item.descricao}'
                 print(mensagem_prato)
             else:
